@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+	<style>
+		.box{
+			width:500px;
+			height:500px;
+			margin:100px auto;
+			background-color:blue;
+			text-align:center;
+			color:white;
+			box-shadow:10px 10px 15px rgba(0,0,0,.5);
+		}
+		.box .box-btn{
+			width:100px;
+			font:bold 22px/22px "宋体";
+			color:green;
+			margin-top:50px;
+		}
+		.box .box-stuNames{
+			width:300px;
+			height:300px;
+			margin:0 auto;
+			background-color:#000;
+			font:bold 48px/300px "宋体";
+			margin-top:60px;
+			box-shadow:10px 10px 5px rgba(0,0,0,.5);
+		}
+	</style>
+	<script>
+		var names = ["张伍","李琼","田艳荣","谷爽","李俊","许琳","马洪杰","李鑫峡","刘爽","仇文","连敏","张帝","马志航","张佳强","杨旭","林著烨","陶润梓","周诚","李瑞刚","王鹏越","张强","高家军","杜春阳","黄永昶","王红军","蒋明","丁辉","祝晓轶","王凯平","翟腾飞","孟宪臣","姚昌云","田嘉琪","李琦","韩冰","王珏","宣舒霞","吴叶红","李莉"];
+		/*
+		window.onload = function(){
+			var start = document.getElementById("start");
+			var stuNames = document.getElementById("stuNames");
+			var flag = true;
+			start.onclick = function(){
+				if(flag){
+					timer = setInterval(function(){
+						var index = parseInt(Math.random()*names.length);
+						stuNames.innerHTML = names[index];
+						start.innerHTML = "停止";
+						flag = false;
+					},10);
+				}else{
+					clearInterval(timer);
+					start.innerHTML = "开始";
+					flag = true;
+				}
+			}
+		}
+		*/
+		/*
+		window.onload = function(){
+			var start = document.getElementById("start");
+			var stuNames = document.getElementById("stuNames");
+			var flag = true;
+			start.onclick = function(){
+				if(flag){
+					timer = setInterval(function(){
+						var index = parseInt(Math.random()*names.length);
+						stuNames.innerHTML = names[index];
+						start.innerHTML = "停止";
+						flag = false;
+					},100);
+				}else{
+					clearInterval(timer);
+					start.innerHTML = "开始";
+					flag = true;
+				}
+			}
+		}
+		*/
+
+		window.onload = function(){
+			var start = document.getElementById("start");
+			var stuNames = document.getElementById("stuNames");
+			var flag = true;
+			start.onclick = function(){
+				if(flag){
+					timer = setInterval(function(){
+						var index = parseInt(Math.random()*names.length);
+						stuNames.innerHTML = names[index];
+						start.innerHTML = "停止";
+						flag = false;
+					},100);
+				}else{
+					clearInterval(timer);
+					start.innerHTML = "开始";
+					flag = true;
+				}
+			}
+		}
+	</script>	
+
+</head>
+<body>
+	<div class="box">
+		<button  id="start" class="box-btn">开始</button>
+		<div class="box-stuNames" id="stuNames">
+			随机点名
+		</div>
+	</div>
+</body>
+</html>
